@@ -1,0 +1,15 @@
+\chapter{Thesis conclusion}\label{chap6}
+In \autoref{chap3} we used the mathematical fact that for high thresholds, the distribution of the right tail function is strictly Pareto. We proposed both a penalised ML approach and a Bayesian a posteriori approach of applying some penalty on the parameter $\delta$. We showed that the asymptotic MSE of the optimal penalised estimator is uniformly smaller than the MSE of the EPD-ML estimator. We conducted a simulation study to assert these findings. A short case study on the Secura Belgian Re data was also conducted.
+\\\\
+In \autoref{chap4}, we proposed a bias reduced version of the \cite{worms2014new}. We also applied the shrinkage estimation procedure proposed in \autoref{chap3} and proposed in part a penalised version which led to much improved results. Due to the lack of any distribution theory of the \cite{worms2014new} we conducted finite sample simulations for the proposed estimators and presented a bootstrap algorithm in order to construct confidence intervals for the adapted EVI. Effectiveness of the proposed method were assessed with a long-tailed insurance case-study. The proposed estimators where shown to have an overall better performance.
+\\\\
+In \autoref{chap5}, we generalise the bias reduction approach of \cite{beirlant2009second} to all domains of attraction using a GP model. We use the flexible GP modelling introduced in \cite{tencaliec2018flexible} to model the second order component. We also proposed a method to assess the goodness of fit of the proposed model. To the best of our knowledge bias reduction of the GPD has not been considered in literature.
+\\\\
+\section{Outlook and future work}
+Careful considerations are needed when deciding exactly which portion of the data can be classified as the tail i.e. choosing a threshold. Choosing a threshold is ultimately subject to a practitioner's judgement often based on graphical diagnostics. This approach can be very tricky when multiple data sources are considered. This is one of the reasons research focus on building models that can capture the bulk and tail component of a distribution is gaining significance.
+\\\\
+This thesis considered methods based on second-order modelling. In most cases within the EVT framework, applying second order expansions allows us to conveniently derive explicit expressions which do not suffer from complicated computational aspects faced by mixture models. The proposed methods in \autoref{chap5} were computationally intensive as the algorithms were implemented in the \textbf{R} programming language. Using a lower level language such as \textbf{C++} can greatly improve methods in \autoref{chap5}.
+\\\\
+The bias-reduction methods proposed in \autoref{chap5} can be extended to cases where data is censored but not heavy tailed. One can also consider methods proposed by \cite{naveau2016modeling} and \cite{tencaliec2018flexible} to model the entire range of censored data.
+\\\\
+Lastly, focus in this thesis was primarily placed on the estimation of the EVI and occasionally on small tail probabilities. Other tail quantities can be further derived from the methods proposed.

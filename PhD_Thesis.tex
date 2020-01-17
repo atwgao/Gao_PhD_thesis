@@ -1,0 +1,83 @@
+\documentclass{dmathesis}
+\usepackage{epic}
+%\usepackage{showlabel}
+\usepackage{multirow}
+\usepackage{booktabs}
+\input{format}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage{wasysym}
+\usepackage[utf8]{inputenc}
+\usepackage{epigraph}
+\usepackage{bibentry}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\epigraphfontsize{\small\itshape}
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{graphicx,amstext, amsmath, amssymb,color}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = false, urlcolor=darkgray,
+    linkbordercolor = {white},
+    colorlinks=true,linkcolor=darkgray,citecolor=darkgray
+}
+\usepackage{lscape}
+\newtheorem{mydef}{Definition}
+\newcommand{\gammab}{\hat{\gamma}_k^{P}}
+\newcommand{\db}{\hat{\delta}_k^{P}}
+%\renewenvironment{proof}{{\bfseries Proof}}{}
+\includeonly{chapter1,chapter2,chapter3%
+                 ,chapter4,chapter5,chapter6,ref,append}
+%%Tittle spacing
+\usepackage{hyperref}
+\usepackage{url}
+\addto\extrasenglish{%
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+}
+
+
+%\usepackage{titlesec}
+\usepackage[round, sort, numbers,authoryear, sort]{natbib}
+\usepackage{comment}
+%\titleclass{\chapter}{straight}
+%\titleformat{\chapter}{\bfseries\huge}{\thechapter}{0.3em}{}
+\usepackage{parskip}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\declaretheorem[style=definition,qed=$\blacktriangle$,numberwithin=chapter]{definition}
+\declaretheorem[style=definition,qed=$\blacktriangle$,sibling=definition]{example}
+\declaretheorem[style=plain,sibling=definition]{theorem}
+\declaretheorem[style=plain,sibling=definition]{lemma}
+\hypersetup{pdfinfo={
+		Title={PhD Thesis},
+		Subject={Flegammable univariate extreme value modelling with applications in Insurance},
+		Author={Gaonyalelwe Maribe}} }
+
+\begin{document}
+
+\input{frontpage}
+%% To ensure the equation counter works correctly
+\setcounter{page}{1}
+\eqlabon
+\eqlaboff
+\pagenumbering{arabic}
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{ref}
+
+\end{document}

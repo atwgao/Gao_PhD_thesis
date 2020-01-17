@@ -1,0 +1,58 @@
+\setcounter{equation}{0}
+\chapter{Introduction}
+\epigraphfontsize{\small\itshape}
+\epigraph{``\textit{Nothing is more self-limiting than going to extremes}.''}{--- Marty Rubin}
+\vspace{2.8cm}
+\noindent
+At the forefront of philosophical discourses in statistics, was the measure of central tendency of a population (the average). The inquiry of the ``limiting" distribution of a sequence of random variables would later lead up to the first version of what is known as the Central Limit Theorem (CLT) which appeared in 1733, by the French-born mathematician Abraham de Moivre. 
+
+The CLT is perhaps the most fundamental result in all of statistics. It provides a theoretical framework that allows for justification of inference to extrapolate from a sample and make good approximations and predictions. Under some conditions the CLT states that the normal distribution (Gaussian) appears as a limiting distribution of the sample averages when the number of observations is sufficiently large. 
+
+A corresponding discourse which emerged in the 20th century, was that of the maxima rather than the average. {\it What appears as the limiting distribution of the partial maxima ?}
+
+This question has led to a very fruitful and path-breaking intellectual pursuit, the development of a theoretical framework known as Extreme Value Theory (EVT). Most concur that it made a first appearance in a paper by \cite{dodd1923greatest}, followed quickly by the papers of \cite{frechet1927} and \cite{fisher1928limiting}.
+
+EVT has a rich mathematical theory which helps us answer non-trivial inferential questions about extreme observations and is applicable to a vast number of disciplines. The goal is often motivated by the need to predict the upper quantile or tail probability. Areas of application include but is not limited to: climatology, finance, insurance, survival analysis, hydrology and geology.
+
+\section{Purpose of study and contributions}
+The main research focus in EVT has over the past half-century taken a dramatic change. Peaks over threshold (POT) methods based on large observations (herein referred to as excesses) above some suitably high threshold have become more popular since the pioneering work of \cite{balkema1974residual} and \cite{pickands1975statistical}. The use of POT methods however prompt the question: ``what is a suitable threshold?" Issues with threshold selection are discussed in Section \ref{thresholdsection}. Work presented in this thesis is meant to subjugate the sensitivity inherent in threshold selection.
+
+A second-order refined model makes use of additional information up to the second-order about the slowly varying function $\ell$. \cite{sts626} proposed a quantile and probabilistic view of second-order refinements for $\gamma>0$ estimators. In the first part of this PhD thesis, we propose some improvements to second order refinements made by \cite{beirlant2009second} by using the theoretical fact that, for large thresholds the distribution of excesses is strictly Pareto, leading to a shrinkage estimation technique of the extreme value index (EVI).
+
+Motivated by applications for instance in actuarial statistics, the subject of censoring in heavy-tailed data has received growing attention in EVT. This thesis reviews some existing tail estimation methods and proposes a second order improved version of the \cite{worms2014new} estimator.
+
+Second order models naturally add some restrictions. This thesis further proposes a bias reduced tail fitting technique that allows for these restrictions to be relaxed. The second order refined POT approach started in \cite{beirlant2009second} is revisited and extended to all max-domains of attraction by applying a flexible semi-parametric modelling of the second order component.
+
+\section{Thesis Objectives}
+\begin{itemize}
+    \item Propose a shrinkage estimation technique to reduce the mean squared error (MSE) of the Extended Pareto distribution (EPD) of \cite{beirlant2009second};
+    \item Propose a bias reduced version of the \cite{worms2014new} estimator;
+    \item Construct confidence intervals of the bias reduced \cite{worms2014new} using a bootstrap algorithm;
+    \item Propose a novel bias reduced tail fitting technique for all max-domains of attractions.
+\end{itemize}
+\section{Outline of Thesis}
+This thesis is divided into two parts, \autoref{part1} focuses on second order refinements for censored and uncensored heavy-tailed distributions. \autoref{part2} reviews attempts made to build flexible full models capable of capturing the bulk and tail part of the data. A novel semi-parametric refinement is proposed in this part.
+
+\autoref{chap2} gives an overview of EVT, introduces some key concepts and mentions historical developments in the field. 
+In \autoref{chap3} we introduce a shrinkage estimation technique to improve an unbiased estimator of the EVI and reduce the overall MSE. The overall reduction in MSE is shown both mathematically and through a finite simulation study. A short case study is conducted on a Secura Belgian Reinsurance data set.
+
+In \autoref{chap4} we focus on random right censored heavy tailed data, and propose a bias reduced version of the \cite{worms2014new} estimator. We then apply the shrinkage technique introduced in \autoref{chap3} to improve MSE of this newly proposed estimator. A finite simulation study and a long tailed insurance application are conducted.
+
+In \autoref{chap5}, the second order bias reduction technique is extended to all domains of attraction. A general form of the second order refined model is proposed. Merits of the proposed estimators are illustrated with a case study on a rain fall data set. An interactive simulation study is conducted and hosted on a shiny-website provided at the end of the chapter.
+
+In \autoref{chap6}, a conclusion of the study is presented, and some areas which allow for further research are identified.
+\newpage
+
+\section{Authorship and publication}
+Some parts of this thesis are based on work by the author already published in international peer reviewed journals. Below is the list of published and publishable journal papers listed in chronological order as presented in chapters to follow.
+
+\begin{enumerate}
+    \item Beirlant, J., Maribe, G. and Verster, A., 2019. Using shrinkage estimators to reduce bias and MSE in estimation of heavy tails. \textit{REVSTAT–Statistical Journal}, 17(1), pp.91-108.
+    
+    \item Beirlant, J., Maribe, G. and Verster, A., 2018. Penalized bias reduction in extreme value estimation for censored Pareto-type data, and long-tailed insurance applications.\textit{ Insurance: Mathematics and Economics}, 78, pp.114-122.
+    
+    \item Beirlant, J., Maribe, G., Naveau, P. and Verster, A., 2018. Bias Reduced Peaks over Threshold Tail Estimation. \textit{arXiv preprint arXiv:1810.01296.}
+\end{enumerate}
+\nocite{beirlant2017using}
+\nocite{beirlant2018penalized}
+\nocite{beirlant2018bias}
